@@ -5,7 +5,7 @@ class Location(models.Model):
     """Class that defines the image location"""
     location = models.CharField(max_length= 30)
 
-    def __str__(selfself):
+    def __str__(self):
         return self.location
 
     def save_location(self):
