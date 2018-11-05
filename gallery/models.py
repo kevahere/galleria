@@ -35,7 +35,7 @@ class Images(models.Model):
     location = models.ForeignKey(Location,default=1)
     category = models.ManyToManyField(Category)
 
-    class meta:
+    class Meta:
         ordering = ['name']
 
     def __str__(self):
