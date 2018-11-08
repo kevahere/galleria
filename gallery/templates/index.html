@@ -6,7 +6,7 @@
       {%for image in images %}
       <!--Displaying the images  -->
       <div class="card col-xs-4 col-sm-4 col-lg-4">
-        <img src="{{image.image.url}}" alt="Image" class="card-img-top" data-toggle="modal" data-target="#exampleModal{{image.id}}">
+        <img src="{{image.image.url}}" alt="Image" class="img-responsive" data-toggle="modal" data-target="#exampleModal{{image.id}}">
       </div>
       <div class="modal fade" id="exampleModal{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role = "document">
@@ -18,10 +18,10 @@
             </button>
           </div>
           <div class="modal-body">
-            <img src="image.image.url" alt="{{image.name}}">
+            <img src="image.image.url" alt="{{image.name}}" >
           </div>
           <div class="modal-footer">
-            <button  type="button" value="https://hall-of-james.herokuapp.com{{image.image.url}}"  onclick="copyLink(this.value)"
+            <button  type="button" value="https://kevsgallery.herokuapp.com{{image.image.url}}"  onclick="copyLink(this.value)"
                          class="btn btn-outline-secondary my-2 my-sm-0 link-btn"><i class="far fa-copy"></i> Copy link</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
