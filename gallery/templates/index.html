@@ -3,25 +3,25 @@
   <h1>Welcome to the Gallery!</h1>
   <div class="container">
     <div class="row">
-      {%for pic in pics%}
+      {%for image in images %}
       <!--Displaying the images  -->
       <div class="card col-xs-4 col-sm-4 col-lg-4">
-        <img src="{{pic.image.url}}" alt="Image" class="card-img-top" data-toggle="modal" data-target="#exampleModal{{pic.id}}">
+        <img src="{{image.image.url}}" alt="Image" class="card-img-top" data-toggle="modal" data-target="#exampleModal{{image.id}}">
       </div>
-      <div class="modal fade" id="exampleModal{{pic.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role = "document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{pic.name}}</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{image.name}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&time</span>
             </button>
           </div>
           <div class="modal-body">
-            <img src="pic.image.url" alt="{{pic.name}}">
+            <img src="image.image.url" alt="{{image.name}}">
           </div>
           <div class="modal-footer">
-            <button  type="button" value="https://hall-of-james.herokuapp.com{{pic.image.url}}"  onclick="copyLink(this.value)"
+            <button  type="button" value="https://hall-of-james.herokuapp.com{{image.image.url}}"  onclick="copyLink(this.value)"
                          class="btn btn-outline-secondary my-2 my-sm-0 link-btn"><i class="far fa-copy"></i> Copy link</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
